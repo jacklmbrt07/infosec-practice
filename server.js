@@ -25,6 +25,7 @@ app.get('/file/*?', function(req, res, next) {
   });
 });
 
+app.use(helmet.hidePoweredBy());
 
 var main = require('./myApp.js');
 app.get('/app-info', function(req, res) {
